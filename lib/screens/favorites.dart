@@ -33,7 +33,8 @@ class _MyFavoritesState extends State<MyFavorites> {
             radius: BorderRadius.circular(20.0),
             frontIconColor: Colors.grey,
             backIconColor: Colors.green,
-            hintTitleColor: Colors.grey
+            hintTitleColor: Colors.grey, 
+            obscure: false,
           )
         ),
       ),

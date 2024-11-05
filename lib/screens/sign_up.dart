@@ -18,7 +18,8 @@ class SignUp extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     radius: 60.0,
-                    backgroundColor: Colors.grey,
+                    backgroundColor: Color.fromARGB(255, 209, 17, 129),
+                    backgroundImage: AssetImage('assets/img/logo.png'),
                   ),
                   const SizedBox(
                     height: 50.0,
@@ -37,7 +38,8 @@ class SignUp extends StatelessWidget {
                     hintTitle: 'Enter Username',
                     radius: BorderRadius.circular(15.0),
                     frontIconColor: null,
-                    hintTitleColor: Colors.grey
+                    hintTitleColor: Colors.grey, 
+                    obscure: false,
                   ),
                   const SizedBox(
                     height: 10.0,
@@ -46,7 +48,8 @@ class SignUp extends StatelessWidget {
                     hintTitle: 'Enter number',
                     radius: BorderRadius.circular(15.0),
                     frontIconColor: null,
-                    hintTitleColor: Colors.grey
+                    hintTitleColor: Colors.grey, 
+                    obscure: false,
                   ),
                   const SizedBox(
                     height: 10.0,
@@ -55,7 +58,8 @@ class SignUp extends StatelessWidget {
                     hintTitle: 'Enter password',
                     radius: BorderRadius.circular(15.0),
                     frontIconColor: null,
-                    hintTitleColor: Colors.grey
+                    hintTitleColor: Colors.grey, 
+                    obscure: true,
                   ),
                   const SizedBox(
                     height: 10.0,
@@ -64,7 +68,8 @@ class SignUp extends StatelessWidget {
                     hintTitle: 'Confirm password',
                     radius: BorderRadius.circular(15.0),
                     frontIconColor: null,
-                    hintTitleColor: Colors.grey
+                    hintTitleColor: Colors.grey, 
+                    obscure: true,
                   ),
                   const SizedBox(
                     height: 30.0,

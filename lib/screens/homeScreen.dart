@@ -174,7 +174,8 @@ class HomePage extends StatelessWidget {
                     backIcon: Icons.filter_list_outlined,
                     backIconColor: Colors.grey, 
                     frontIconColor: Colors.grey, 
-                    hintTitleColor: null,
+                    hintTitleColor: null, 
+                    obscure: false,
                   ),
                 ),
               )
