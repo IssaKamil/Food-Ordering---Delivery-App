@@ -1,3 +1,4 @@
+import 'package:cypherdevs_app/screens/homeScreen.dart';
 import 'package:cypherdevs_app/widgets/stackwidget.dart';
 import 'package:cypherdevs_app/widgets/text_field.dart';
 // import 'package:cypherdevs_app/widgets/text_field.dart';
@@ -20,9 +21,13 @@ class _MyFavoritesState extends State<MyFavorites> {
           'Favorite',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        leading: const Icon(
-          Icons.arrow_back_sharp,
-          color: Color.fromARGB(255, 174, 20, 71),
+        leading: IconButton(
+          color: const Color.fromARGB(255, 174, 20, 71), 
+          onPressed: () => Navigator.push(
+            context, MaterialPageRoute(
+              builder: (context) => const HomePage()
+            )
+          ), icon: const Icon(Icons.arrow_back_sharp),
         ),
         bottom: PreferredSize(
           preferredSize: const Size(double.infinity, 75.0),
@@ -42,21 +47,27 @@ class _MyFavoritesState extends State<MyFavorites> {
           elevation: 8.0,
           selectedItemColor: const Color.fromARGB(230, 216, 21, 177),
           unselectedItemColor: Colors.grey[600],
-          items: const [
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
+              icon: IconButton(
+                onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(
+                    builder: (context) => const HomePage()
+                  )
+                ), icon: const Icon(Icons.home_outlined)
+              ),
               label: 'Home',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               backgroundColor: Color.fromARGB(230, 216, 21, 177),
               icon: Icon(Icons.favorite_outline),
               label: 'My Favorites',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.add_shopping_cart_outlined),
               label: 'My Carts',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.person_outline_rounded),
               label: 'My Profile',
             ),

@@ -1,5 +1,7 @@
 // ignore_for_file: file_names
 
+import 'package:cypherdevs_app/screens/favorites.dart';
+import 'package:cypherdevs_app/screens/sign_in.dart';
 import 'package:cypherdevs_app/widgets/clickable_button.dart';
 import 'package:cypherdevs_app/widgets/menu.dart';
 import 'package:cypherdevs_app/widgets/popularmenu.dart';
@@ -16,22 +18,48 @@ class HomePage extends StatelessWidget {
           elevation: 8.0,
           selectedItemColor: const Color.fromARGB(230, 216, 21, 177),
           unselectedItemColor: Colors.grey[600],
-          items: const [
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
+              icon: IconButton(
+                padding: const EdgeInsets.all(0.0),
+                onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(
+                    builder: (context) => const HomePage()
+                  )
+                ), icon: const Icon(Icons.home_outlined)
+              ),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              backgroundColor: Color.fromARGB(230, 216, 21, 177),
-              icon: Icon(Icons.favorite_outline),
+              backgroundColor: const Color.fromARGB(230, 216, 21, 177),
+              icon: IconButton(
+                padding: const EdgeInsets.all(0.0),
+                onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(
+                    builder: (context) => const MyFavorites()
+                  )
+                ), icon: const Icon(Icons.favorite_outline)
+              ),
               label: 'My Favorites',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.add_shopping_cart_outlined),
+              icon: IconButton(
+                padding: const EdgeInsets.all(0.0),
+                onPressed: () {  },
+                icon: const Icon(
+                  Icons.add_shopping_cart_outlined
+                ),
+              ),
               label: 'My Carts',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline_rounded),
+              icon: IconButton(
+                padding: const EdgeInsets.all(0.0),
+                onPressed: () {  },
+                icon: const Icon(
+                  Icons.person_outline_rounded
+                ),
+              ),
               label: 'My Profile',
             ),
           ]
@@ -52,56 +80,78 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 30.0,
                 ),
-                const ListTile(
-                  leading: Icon(
+                ListTile(
+                  onTap: () {
+                    
+                  },
+                  leading: const Icon(
                     Icons.person_outline,
                   ),
-                  title: Text(
+                  title: const Text(
                     'User Information',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ),
-                const ListTile(
-                  leading: Icon(
+                ListTile(
+                  onTap: () {
+                    
+                  },
+                  leading: const Icon(
                     Icons.add_shopping_cart_outlined,
                   ),
-                  title: Text(
+                  title: const Text(
                     'My Cart',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ),
-                const ListTile(
-                  leading: Icon(
+                ListTile(
+                  onTap: () => Navigator.push(
+                    context, MaterialPageRoute(
+                      builder: (context) => const MyFavorites()
+                    )
+                  ),
+                  leading: const Icon(
                     Icons.favorite_outline,
                   ),
-                  title: Text(
+                  title: const Text(
                     'My Favorite',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ),
-                const ListTile(
-                  leading: Icon(
+                ListTile(
+                  onTap: () {
+                    
+                  },
+                  leading: const Icon(
                     Icons.notification_add_outlined,
                   ),
-                  title: Text(
+                  title: const Text(
                     'Notification',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ),
-                const ListTile(
-                  leading: Icon(
+                ListTile(
+                  onTap: () {
+                    
+                  },
+                  leading: const Icon(
                     Icons.headset_mic_sharp,
                   ),
-                  title: Text(
+                  title: const Text(
                     'Help',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ),
-                const ListTile(
-                  leading: Icon(
+                ListTile(
+                  onTap: () => Navigator.push(
+                    context, MaterialPageRoute(
+                      builder: (context) => const SignIn()
+                    )
+                  ),
+                  leading: const Icon(
                     Icons.logout_outlined,
                   ),
-                  title: Text(
+                  title: const Text(
                     'Logout',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),

@@ -1,3 +1,4 @@
+import 'package:cypherdevs_app/screens/homeScreen.dart';
 import 'package:cypherdevs_app/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -60,6 +61,8 @@ class SignUp extends StatelessWidget {
                     frontIconColor: null,
                     hintTitleColor: Colors.grey, 
                     obscure: true,
+                    backIcon: Icons.visibility,
+                    backIconColor: Colors.grey,
                   ),
                   const SizedBox(
                     height: 10.0,
@@ -70,6 +73,8 @@ class SignUp extends StatelessWidget {
                     frontIconColor: null,
                     hintTitleColor: Colors.grey, 
                     obscure: true,
+                    backIcon: Icons.visibility,
+                    backIconColor: Colors.grey,
                   ),
                   const SizedBox(
                     height: 30.0,
@@ -83,7 +88,11 @@ class SignUp extends StatelessWidget {
                         Color.fromARGB(255, 154, 5, 92)
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () => Navigator.push(
+                      context, MaterialPageRoute(
+                        builder: (context) => const HomePage()
+                      )
+                    ),
                     child: const Text(
                       'Sign Up',
                       style: TextStyle(

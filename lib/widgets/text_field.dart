@@ -37,13 +37,15 @@ class TextFieldWidget extends StatelessWidget {
               color: hintTitleColor,
             ),
             border: OutlineInputBorder(borderRadius: radius!),
-            prefixIcon: Icon(
-              frontIcon,
-              color: frontIconColor,
+            prefixIcon: IconButton(
+              color: frontIconColor, 
+              onPressed: () {  }, 
+              icon: Icon(frontIcon),
             ),
-            suffixIcon: Icon(
-              backIcon,
-              color: backIconColor,
+            suffixIcon: IconButton(
+              color: backIconColor, 
+              icon: Icon(backIcon), 
+              onPressed: () {  },
             )),
       ),
     );
